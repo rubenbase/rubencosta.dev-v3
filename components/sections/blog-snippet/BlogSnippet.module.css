@@ -1,0 +1,73 @@
+.blogSnippetContainer {
+  background-color: #040d21;
+}
+
+.stepOneLine {
+  height: 100px;
+  --start-color: #fff;
+  --end-color: #019ae9;
+  --gap-ratio: 1;
+  background: linear-gradient(var(--start-color), var(--end-color));
+  padding-right: 1px;
+  width: 1px;
+  align-self: center;
+}
+
+.svgContainerBg {
+  background: rgb(237, 246, 255);
+  background: radial-gradient(
+    circle,
+    rgb(206, 229, 252) 0.2%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.articlesTitle {
+  background: -webkit-linear-gradient(-70deg, #00ffdd, #005eff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
+.longArticle {
+  grid-row-end: span 2;
+}
+
+.articles {
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.coverImage {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.coverImage::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(50%, transparent),
+    to(rgba(0, 0, 0, 0.8))
+  );
+  background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+}

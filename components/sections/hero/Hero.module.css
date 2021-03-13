@@ -1,0 +1,50 @@
+.heroContainer {
+  max-width: calc(16px * 2 + 1080px);
+}
+
+.title {
+  min-width: calc(100% + 100px);
+  font-size: 40px;
+  line-height: 1;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+  .title {
+    font-size: calc(40px + 4vw);
+  }
+  .description {
+    min-width: calc(100% + 50px);
+    font-size: calc(16px + 0.4vw);
+  }
+}
+
+@media (min-width: 880px) {
+  .title {
+    font-size: 96px;
+  }
+  .description {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+.artBox {
+  width: 980px;
+  height: 1110px;
+  /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABOBAMAAABxmk1pAAAAElBMVEUAAAD///////////////////8+Uq06AAAABnRSTlMAABsxMjOet23PAAAAOklEQVRIx2NgGAWjYBQgAJORICpQVsBUxBKMpsjVgEyTGAXRgcCoolFFo4pGFQ0zRXQuWEfBKKAXAADfuDIT8wTzqQAAAABJRU5ErkJggg==) rgb(232 26 168); */
+  border-radius: 50px;
+  transform: rotate(107deg);
+  position: absolute;
+  left: calc(100px + 58%);
+  top: 15%;
+  display: flex;
+  z-index: -1;
+  pointer-events: none;
+  /* background: linear-gradient(90deg, #1563ff 1.56%, #08368b); */
+}
