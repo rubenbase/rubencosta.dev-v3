@@ -4,6 +4,7 @@ import MainNav from 'components/templates/MainNav'
 import NavbarPromo from 'components/molecules/navbar-promo'
 import Hero from 'components/sections/hero'
 import BlogSnippet from 'components/sections/blog-snippet'
+import { home } from 'content'
 
 const Home = () => {
   return (
@@ -28,6 +29,13 @@ const Home = () => {
   )
 }
 
+export function getStaticProps(ctx) {
+  return {
+    props: {
+      content: ctx.preview ? home.draft : home.published,
+    },
+  }
+}
 export default Home
 
 /**

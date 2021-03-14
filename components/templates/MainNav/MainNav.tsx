@@ -1,6 +1,7 @@
 import React, { createRef, useState, useEffect } from 'react'
 
 import styles from './MainNav.module.css'
+import Link from 'next/link'
 
 type MainNavProps = {
   sticky?: boolean
@@ -35,10 +36,14 @@ const MainNav: React.FC<MainNavProps> = ({ sticky = false, className, ...rest })
       {...rest}
     >
       <div className={`${styles.mainNavContainer} flex items-center justify-between`}>
-        <h1 className={`${styles.logo} font-bold text-2xl cursor-pointer`}>RC</h1>
+        <Link href="/">
+          <a className={`${styles.logo} font-bold text-2xl cursor-pointer`}>RC</a>
+        </Link>
         <nav>
           <ul className="flex list-none space-x-9 font-semibold">
-            <li className={styles.link}>Blog</li>
+            <li className={styles.link}>
+              <a href="/blog">Blog</a>
+            </li>
             <li className={styles.link}>Contact Me</li>
           </ul>
         </nav>

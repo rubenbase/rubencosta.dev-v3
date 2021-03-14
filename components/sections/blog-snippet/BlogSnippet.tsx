@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './BlogSnippet.module.css'
 import Link from 'next/link'
 
-const BlogSnippet: React.FC<{ articles: unknown[] }> = ({ articles }) => {
+const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
   return (
     <div className="text-white relative">
       <div className="max-w-2xl mx-auto absolute inset-0 -top-14 rounded-xl">
@@ -15,9 +15,9 @@ const BlogSnippet: React.FC<{ articles: unknown[] }> = ({ articles }) => {
         <div>
     */}
 
-          <div aria-hidden="true" class="hidden sm:block">
+          <div aria-hidden="true" className="hidden sm:block">
             <svg
-              class="absolute -top-12 right-1/2 -ml-3"
+              className="absolute -top-12 right-1/2 -ml-3"
               width="380"
               height="292"
               opacity=".1"
@@ -38,7 +38,7 @@ const BlogSnippet: React.FC<{ articles: unknown[] }> = ({ articles }) => {
                     y="0"
                     width="4"
                     height="4"
-                    class="text-gray-800"
+                    className="text-gray-800"
                     fill="currentColor"
                   />
                 </pattern>
@@ -50,50 +50,53 @@ const BlogSnippet: React.FC<{ articles: unknown[] }> = ({ articles }) => {
               />
             </svg>
           </div>
-          <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="relative rounded-2xl px-6 py-8 bg-blue-50 overflow-hidden shadow-xl sm:px-12 sm:py-14">
-              <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="relative rounded-2xl px-6 py-8 bg-blue-50 overflow-hidden shadow-xl sm:px-12 sm:py-14">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
+              >
                 <svg
-                  class="absolute inset-0 h-full w-full"
+                  className="absolute inset-0 h-full w-full"
                   preserveAspectRatio="xMidYMid slice"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 1463 360"
                 >
                   <path
-                    class="text-blue-200 text-opacity-40"
+                    className="text-blue-200 text-opacity-40"
                     fill="currentColor"
                     d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z"
                   />
                   <path
-                    class="text-blue-300 text-opacity-40"
+                    className="text-blue-300 text-opacity-40"
                     fill="currentColor"
                     d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z"
                   />
                 </svg>
               </div>
-              <div class="relative">
-                <div class="sm:text-center">
-                  <h2 class="text-3xl font-extralight text-gray-800 tracking-tight sm:text-4xl">
+              <div className="relative">
+                <div className="sm:text-center">
+                  <h2 className="text-3xl font-extralight text-gray-800 tracking-tight sm:text-4xl">
                     Sign up for the newsletter
                   </h2>
                 </div>
-                <form action="#" class="mt-8 sm:mx-auto sm:max-w-lg sm:flex">
-                  <div class="min-w-0 flex-1">
-                    <label for="cta_email" class="sr-only">
+                <form action="#" className="mt-8 sm:mx-auto sm:max-w-lg sm:flex">
+                  <div className="min-w-0 flex-1">
+                    <label for="cta_email" className="sr-only">
                       Email address
                     </label>
                     <input
                       id="cta_email"
                       type="email"
-                      class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500"
+                      className="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500"
                       placeholder="Enter your email"
                     />
                   </div>
-                  <div class="mt-4 sm:mt-0 sm:ml-3">
+                  <div className="mt-4 sm:mt-0 sm:ml-3">
                     <button
                       type="submit"
-                      class="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-800 text-base font-medium text-white shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500 sm:px-10"
+                      className="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-800 text-base font-medium text-white shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500 sm:px-10"
                     >
                       Notify me
                     </button>
