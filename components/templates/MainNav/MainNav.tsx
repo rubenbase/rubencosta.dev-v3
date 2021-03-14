@@ -42,7 +42,9 @@ const MainNav: React.FC<MainNavProps> = ({ sticky = false, className, ...rest })
         <nav>
           <ul className="flex list-none space-x-9 font-semibold">
             <li className={styles.link}>
-              <a href="/blog">Blog</a>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
             </li>
             <li className={styles.link}>Contact Me</li>
           </ul>
