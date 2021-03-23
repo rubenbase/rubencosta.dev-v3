@@ -46,7 +46,7 @@ const MainNav: React.FC<MainNavProps> = ({ sticky = false, className, ...rest })
                 <a>Blog</a>
               </Link>
             </li>
-            <li className={styles.link}>Contact Me</li>
+            <li className={styles.link}>Contact</li>
           </ul>
         </nav>
         {/* <nav className="flex list-none">
