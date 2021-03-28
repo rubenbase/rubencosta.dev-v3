@@ -96,9 +96,11 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
                   <div className="mt-4 sm:mt-0 sm:ml-3">
                     <button
                       type="submit"
-                      className="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-800 text-base font-medium text-white shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500 sm:px-10"
+                      disabled
+                      className="cursor-not-allowed block w-full rounded-md border border-transparent px-5 py-3 bg-gray-800 text-base font-medium text-white shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-500 sm:px-10"
                     >
-                      Notify me
+                      {/* Notify me */}
+                      Coming soon
                     </button>
                   </div>
                 </form>

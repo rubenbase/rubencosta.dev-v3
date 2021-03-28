@@ -19,7 +19,7 @@ const Blog = ({ posts }) => {
       <MainNav />
       <main className="wrapper">
         <div className="mt-10">
-          <span className="font-light text-gray-500">Hey there!</span>
+          <span className="font-light text-blue-700">Hey there!</span>
         </div>
         <div className="mb-8 rounded-full">
           <span className="font-bold text-4xl">Explore the beauty of the web</span>
