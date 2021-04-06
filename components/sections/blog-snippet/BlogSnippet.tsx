@@ -83,7 +83,7 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
                 </div>
                 <form action="#" className="mt-8 sm:mx-auto sm:max-w-lg sm:flex">
                   <div className="min-w-0 flex-1">
-                    <label for="cta_email" className="sr-only">
+                    <label htmlFor="cta_email" className="sr-only">
                       Email address
                     </label>
                     <input
@@ -168,7 +168,7 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
           </div>
           {/* read all */}
           <div className="max-w-6xl mt-12 mx-auto w-full px-4 flex">
-            <Link href="#">
+            <Link href="/blog">
               <a className="uppercase tracking-widest text-sm hover:opacity-80 cursor-pointer mr-2">
                 View all articles
                 <svg
