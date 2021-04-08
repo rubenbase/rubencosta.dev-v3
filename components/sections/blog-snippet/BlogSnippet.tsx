@@ -6,8 +6,8 @@ import Link from 'next/link'
 const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
   return (
     <div className="text-white relative">
-      <div className="max-w-2xl mx-auto absolute inset-0 -top-14 rounded-xl">
-        <div className="text-center">
+      <div className="max-w-2xl mx-auto rounded-xl">
+        <div className="relative text-center">
           {/* <h1 className="text-black py-2 text-3xl font-bold tracking-tighter">
             Join the newsletter!
           </h1>
@@ -50,7 +50,7 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
               />
             </svg>
           </div>
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="absolute inset-0 -top-14 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="relative rounded-2xl px-6 py-8 bg-blue-50 overflow-hidden shadow-xl sm:px-12 sm:py-14">
               <div
                 aria-hidden="true"

@@ -37,13 +37,12 @@ export const BlogPost = ({ post }: BlogPostProps) => {
       <Head>
         <title>Ruben Costa Blog</title>
       </Head>
-      <MainNav />
       <main>
         <Container>
-          <h1>{post.title}</h1>
+          <div className="flex flex-wrap py-10 mb-2 px-4 space-x-4">
+            <h1>{post.title}</h1>
+          </div>
         </Container>
-
-        <Footer />
       </main>
     </Pane>
   )

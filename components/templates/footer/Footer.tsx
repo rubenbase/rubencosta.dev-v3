@@ -14,16 +14,16 @@ const Footer: React.FC = () => {
           </a>
         </Link>
         <Link href="/">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">Contact</a>
+          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">contact</a>
         </Link>
         <Link href="/">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">Blog</a>
+          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">blog</a>
         </Link>
         <Link href="/">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">Courses</a>
+          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">courses</a>
         </Link>
         <Link href="/">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">About me</a>
+          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">about me</a>
         </Link>
       </div>
     </Container>

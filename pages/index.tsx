@@ -9,8 +9,6 @@ import { home } from 'content'
 const Home = () => {
   return (
     <div className="relative">
-      <NavbarPromo />
-      <MainNav />
       <div className="overflow-hidden relative">
         <Hero />
         <BlogSnippet />
