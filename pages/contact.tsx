@@ -189,3 +189,17 @@
 // }
 
 // export default Contact
+
+import React from 'react'
+
+// import { Container } from './styles';
+
+const Contact: React.FC = () => {
+  return (
+    <div>
+      <p>in progress</p>
+    </div>
+  )
+}
+
+export default Contact
