@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from './Hero.module.css'
+import Link from 'next/link'
 
 const Hero: React.FC = () => {
   return (
@@ -34,9 +35,14 @@ const Hero: React.FC = () => {
                 through quality software.
               </div>
               <div className="flex items-center">
-                <a className="px-4 py-2 bg-primary hover:opacity-80 rounded-2xl text-white mr-4 cursor-pointer">
+                <a
+                  href="/cv"
+                  target="_blank"
+                  className="px-4 py-2 bg-primary hover:opacity-80 rounded-2xl text-white mr-4 cursor-pointer"
+                >
                   Resume
                 </a>
+
                 <a className="inline-flex items-center px-4 py-2 hover:opacity-60 cursor-pointer bg-gray-100 rounded-2xl">
                   Contact{' '}
                   <svg
