@@ -30,11 +30,11 @@ const Footer: React.FC = () => {
         {/* <Link href="/">
           <a className="font-thin text-xl cursor-pointer hover:text-gray-500">courses</a>
         </Link> */}
-        <Link href="/about-me">
+        {/* <Link href="/about-me">
           <a className="font-extralight text-xl cursor-pointer hover:text-gray-500">
             about me
           </a>
-        </Link>
+        </Link> */}
       </div>
     </Container>
   )
