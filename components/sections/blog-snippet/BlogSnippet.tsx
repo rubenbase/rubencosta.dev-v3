@@ -135,10 +135,10 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
             </h1>
           </div>
           <div className="max-w-6xl mt-20 mx-auto">
-            <div className="grid grid-rows-6 grid-flow-col gap-4 mx-4">
+            <div className="flex flex-col md:grid md:grid-rows-6 md:grid-flow-col gap-4 mx-4">
               <Link href={`blog/${articles[0].slug}`}>
                 <div
-                  className={`${styles.coverImage} mr-2 col-span-4 row-span-6 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  className={`${styles.coverImage} mr-2 h-64 md:h-auto col-span-4 row-span-6 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
                   style={{
                     backgroundImage: `url(${articles[0].coverImage})`,
                   }}
@@ -163,7 +163,7 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
               </Link>
               <Link href={`blog/${articles[2].slug}`}>
                 <div
-                  className={`${styles.coverImage} bg-blue-600 col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  className={`${styles.coverImage} bg-blue-600 h-64 md:h-auto col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
                   style={{
                     backgroundImage: `url(${articles[2].coverImage})`,
                   }}

@@ -63,8 +63,8 @@
     color-stop(50%, transparent),
     to(rgba(0, 0, 0, 0.8))
   );
-  background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;

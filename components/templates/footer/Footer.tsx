@@ -15,12 +15,14 @@ const Footer: React.FC = () => {
           </a>
         </Link>
         <Link href="/blog">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">blog</a>
+          <a className="font-extralight text-xl cursor-pointer hover:text-gray-500">
+            blog
+          </a>
         </Link>
         {/* <Link href="/contact" > */}
         <button
           onClick={sendMail}
-          className="font-thin text-xl cursor-pointer hover:text-gray-500"
+          className="font-extralight text-xl cursor-pointer hover:text-gray-500"
         >
           contact
         </button>
@@ -29,7 +31,9 @@ const Footer: React.FC = () => {
           <a className="font-thin text-xl cursor-pointer hover:text-gray-500">courses</a>
         </Link> */}
         <Link href="/about-me">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">about me</a>
+          <a className="font-extralight text-xl cursor-pointer hover:text-gray-500">
+            about me
+          </a>
         </Link>
       </div>
     </Container>

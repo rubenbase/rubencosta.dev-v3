@@ -12,33 +12,6 @@
   padding: 0 16px;
 }
 
-.logo:after {
-  display: none;
-  /* content: 'Ruben Costa'; */
-  position: relative;
-  opacity: 0;
-  top: -20px;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-}
-.logo:hover {
-  /* display: none; */
-  opacity: 1;
-  top: 0px;
-  -webkit-transition: all 3s;
-  transition: all 3s;
-}
-
-.logo:hover:after {
-  display: inline;
-  content: ' | Ruben Costa';
-  font-weight: lighter;
-  opacity: 1;
-  top: 0px;
-  -webkit-transition: all 3s;
-  transition: all 3s;
-}
-
 .link {
   cursor: pointer;
 }

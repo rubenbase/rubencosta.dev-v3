@@ -20,7 +20,7 @@ const Blog = ({ posts }) => {
   return (
     <div className="relative box-border bg-gray-50">
       <main className="wrapper">
-        <div className="pt-10">
+        <div className="pt-10 sm:pt-20">
           <span className="font-light text-blue-700">Hey there!</span>
         </div>
         <div className="mb-8 rounded-full">
@@ -28,6 +28,7 @@ const Blog = ({ posts }) => {
         </div>
         <div className="mb-20">{/* TODO: Complete this  */}</div>
         <div
+          className="pb-20"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(264px, 1fr))',

@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
 
       <div className="mx-4">
         <div className={`${styles.heroContainer} px-4 py-28 mx-auto`}>
-          <div className="grid grid-cols-2 auto-cols-fr">
+          <div className="auto-cols-fr grid grid-cols-1 mr-24 sm:grid-cols-2 sm:mr-0">
             <div className="grid gap-10">
               <header className="min-w-0">
                 <h1 className={`${styles.title} font-semibold tracking-tight`}>
