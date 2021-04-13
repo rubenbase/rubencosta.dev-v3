@@ -59,7 +59,6 @@ function hasCanonicalUrl(article: DevToArticle) {
 }
 
 function articleToPostSummary(article: DevToArticle): PostSummary {
-  console.log('article neno', article)
   return {
     slug: getSlug(article.canonical_url || ''),
     title: article.title,

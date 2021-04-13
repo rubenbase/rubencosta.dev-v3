@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'components/container'
 import Link from 'next/link'
+import { sendMail } from 'utils/sendEmail'
 
 // import { Container } from './styles';
 
@@ -16,9 +17,14 @@ const Footer: React.FC = () => {
         <Link href="/blog">
           <a className="font-thin text-xl cursor-pointer hover:text-gray-500">blog</a>
         </Link>
-        <Link href="/contact">
-          <a className="font-thin text-xl cursor-pointer hover:text-gray-500">contact</a>
-        </Link>
+        {/* <Link href="/contact" > */}
+        <button
+          onClick={sendMail}
+          className="font-thin text-xl cursor-pointer hover:text-gray-500"
+        >
+          contact
+        </button>
+        {/* </Link> */}
         {/* <Link href="/">
           <a className="font-thin text-xl cursor-pointer hover:text-gray-500">courses</a>
         </Link> */}

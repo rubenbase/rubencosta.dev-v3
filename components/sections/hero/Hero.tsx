@@ -38,13 +38,9 @@ const Hero: React.FC = () => {
                 <a
                   href="/cv"
                   target="_blank"
-                  className="px-4 py-2 bg-primary hover:opacity-80 rounded-2xl text-white mr-4 cursor-pointer"
+                  className="inline-flex items-center px-4 py-2 bg-primary hover:opacity-80 rounded-2xl text-white mr-4 cursor-pointer"
                 >
-                  Resume
-                </a>
-
-                <a className="inline-flex items-center px-4 py-2 hover:opacity-60 cursor-pointer bg-gray-100 rounded-2xl">
-                  Contact{' '}
+                  View resume
                   <svg
                     className="w-4 h-4 ml-2 mt-0.5"
                     fill="none"

@@ -1,7 +1,10 @@
 import React from 'react'
+import { GetStaticProps } from 'next'
+import Link from 'next/link'
+
+import { getAllPosts } from 'core/dev-api'
 
 import styles from './BlogSnippet.module.css'
-import Link from 'next/link'
 
 const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
   return (
@@ -133,37 +136,43 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
           </div>
           <div className="max-w-6xl mt-20 mx-auto">
             <div className="grid grid-rows-6 grid-flow-col gap-4 mx-4">
-              <div
-                className={`${styles.coverImage} mr-2 col-span-4 row-span-6 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
-                style={{
-                  backgroundImage: `url(${articles[0].url})`,
-                }}
-              >
-                <div className="absolute bottom-0 p-8">
-                  <h1 className="text-3xl font-bold">{articles[0].title}</h1>
+              <Link href={`blog/${articles[0].slug}`}>
+                <div
+                  className={`${styles.coverImage} mr-2 col-span-4 row-span-6 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  style={{
+                    backgroundImage: `url(${articles[0].coverImage})`,
+                  }}
+                >
+                  <div className="absolute bottom-0 p-8">
+                    <h1 className="text-3xl font-bold">{articles[0].title}</h1>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div
-                className={`${styles.coverImage} bg-pink-500 col-span-3 h-64 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
-                style={{
-                  backgroundImage: `url(${articles[1].url})`,
-                }}
-              >
-                <div className="absolute bottom-0 p-8">
-                  <h1 className="text-3xl font-bold">{articles[1].title}</h1>
+              <Link href={`blog/${articles[1].slug}`}>
+                <div
+                  className={`${styles.coverImage} bg-pink-500 col-span-3 h-64 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  style={{
+                    backgroundImage: `url(${articles[1].coverImage})`,
+                  }}
+                >
+                  <div className="absolute bottom-0 p-8">
+                    <h1 className="text-3xl font-bold">{articles[1].title}</h1>
+                  </div>
                 </div>
-              </div>
-              <div
-                className={`${styles.coverImage} bg-pink-500 col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
-                style={{
-                  backgroundImage: `url(${articles[2].url})`,
-                }}
-              >
-                <div className="absolute bottom-0 p-8">
-                  <h1 className="text-3xl font-bold">{articles[2].title}</h1>
+              </Link>
+              <Link href={`blog/${articles[2].slug}`}>
+                <div
+                  className={`${styles.coverImage} bg-pink-500 col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  style={{
+                    backgroundImage: `url(${articles[2].coverImage})`,
+                  }}
+                >
+                  <div className="absolute bottom-0 p-8">
+                    <h1 className="text-3xl font-bold">{articles[2].title}</h1>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           {/* read all */}

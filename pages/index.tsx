@@ -1,17 +1,21 @@
 import React from 'react'
-import { Pane, majorScale } from 'evergreen-ui'
-import MainNav from 'components/templates/MainNav'
+import { GetStaticProps } from 'next'
+
 import NavbarPromo from 'components/molecules/navbar-promo'
 import Hero from 'components/sections/hero'
 import BlogSnippet from 'components/sections/blog-snippet'
+
 import { home } from 'content'
 
-const Home = () => {
+import { getAllPosts } from 'core/get-posts'
+
+const Home = ({ posts }) => {
+  console.log('the posts are -> ', posts)
   return (
     <div className="relative">
       <div className="overflow-hidden relative">
         <Hero />
-        <BlogSnippet />
+        <BlogSnippet articles={posts} />
       </div>
 
       <main>
@@ -27,16 +31,17 @@ const Home = () => {
   )
 }
 
-export function getStaticProps(ctx) {
-  return {
-    props: {
-      content: ctx.preview ? home.draft : home.published,
-    },
-  }
-}
+// export function getStaticProps(ctx) {
+//   return {
+//     props: {
+//       content: ctx.preview ? home.draft : home.published,
+//     },
+//   }
+// }
+
 export default Home
 
-/**
- * Need to get the posts from the
- * fs and our CMS
- */
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getAllPosts()
+  return { props: { posts }, revalidate: 1 }
+}

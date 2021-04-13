@@ -1,4 +1,5 @@
 import React, { createRef, useState, useEffect } from 'react'
+import { sendMail } from 'utils/sendEmail'
 
 import styles from './MainNav.module.css'
 import Link from 'next/link'
@@ -47,9 +48,9 @@ const MainNav: React.FC<MainNavProps> = ({ sticky = false, className, ...rest })
               </Link>
             </li>
             <li className={styles.link}>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
+              <button className="font-semibold" onClick={sendMail}>
+                Contact
+              </button>
             </li>
           </ul>
         </nav>

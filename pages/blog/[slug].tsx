@@ -14,10 +14,11 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import MainNav from 'components/templates/MainNav'
 import Footer from 'components/templates/footer'
 import { getAllPosts, getPostBySlug } from 'core/get-posts'
+import BlogPost from 'components/sections/blog-post'
 
 export type BlogPostProps = { post?: Partial<Post> }
 
-export const BlogPost = ({ post }: BlogPostProps) => {
+export const BlogPostPage = ({ post }: BlogPostProps) => {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -37,18 +38,12 @@ export const BlogPost = ({ post }: BlogPostProps) => {
       <Head>
         <title>Ruben Costa Blog</title>
       </Head>
-      <main>
-        <Container>
-          <div className="flex flex-wrap py-10 mb-2 px-4 space-x-4">
-            <h1>{post.title}</h1>
-          </div>
-        </Container>
-      </main>
+      <BlogPost post={post} />
     </Pane>
   )
 }
 
-BlogPost.defaultProps = {
+BlogPostPage.defaultProps = {
   source: '',
   frontMatter: { title: 'default title', summary: 'summary', publishedOn: '' },
 }
@@ -96,7 +91,7 @@ BlogPost.defaultProps = {
 //     },
 //   }
 // }
-export default BlogPost
+export default BlogPostPage
 
 export const getStaticProps: GetStaticProps<BlogPostProps> = async (context) => {
   const slug = context.params?.slug
