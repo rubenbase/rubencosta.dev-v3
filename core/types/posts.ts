@@ -14,6 +14,8 @@ export type Post = {
   bodyHtml: string
   openGraphImage?: string
   coverImage?: string
+  tagList?: Array<string>
+  pageViews?: number
   coverImageDimensions?: {
     width: number
     height: number

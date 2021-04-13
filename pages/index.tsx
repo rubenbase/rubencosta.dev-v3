@@ -1,7 +1,6 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 
-import NavbarPromo from 'components/molecules/navbar-promo'
 import Hero from 'components/sections/hero'
 import BlogSnippet from 'components/sections/blog-snippet'
 
@@ -10,23 +9,12 @@ import { home } from 'content'
 import { getAllPosts } from 'core/get-posts'
 
 const Home = ({ posts }) => {
-  console.log('the posts are -> ', posts)
   return (
     <div className="relative">
       <div className="overflow-hidden relative">
         <Hero />
         <BlogSnippet articles={posts} />
       </div>
-
-      <main>
-        {/* <Container>
-          {posts.map((post) => (
-            <Pane key={post.title} marginY={majorScale(5)}>
-              <PostPreview post={post} />
-            </Pane>
-          ))}
-        </Container> */}
-      </main>
     </div>
   )
 }

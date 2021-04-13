@@ -28,7 +28,6 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   })
 
   assert(article)
-
   const parts = matter(article.body_markdown || '')
 
   const bodyHtml = await markdownToHtml(parts.content)
@@ -45,6 +44,8 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     },
     bodyHtml,
     relatedPosts: {},
+    tagList: article.tag_list,
+    pageViews: article.page_views_count,
     mirrors: [{ site: 'Comment on dev.to', postUrl: article.url }],
   }
 }
@@ -89,6 +90,7 @@ export interface DevToArticle {
   description: string
   readable_publish_date: string
   slug: string
+  page_views_count: number
   path: string
   url: string
   comments_count: number
@@ -104,7 +106,7 @@ export interface DevToArticle {
   crossposted_at?: any
   published_at: Date
   last_comment_at: Date
-  tag_list: string
+  tag_list: Array<string>
   tags: string[]
   body_html: string
   body_markdown: string

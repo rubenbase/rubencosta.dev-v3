@@ -163,7 +163,7 @@ const BlogSnippet: React.FC<{ articles?: unknown[] }> = ({ articles }) => {
               </Link>
               <Link href={`blog/${articles[2].slug}`}>
                 <div
-                  className={`${styles.coverImage} bg-pink-500 col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
+                  className={`${styles.coverImage} bg-blue-600 col-span-3 row-span-3 rounded-3xl relative transform transition duration-200 hover:scale-105 cursor-pointer`}
                   style={{
                     backgroundImage: `url(${articles[2].coverImage})`,
                   }}

@@ -130,8 +130,7 @@ const Blog = ({ posts }) => {
                 <div className=" w-60 rounded-2xl overflow-hidden flex justify-center">
                   <Link href={`/blog/${post.slug}`}>
                     <img
-                      style={{ height: '156px', minHeight: '156px' }}
-                      className="w-full object-cover z-10"
+                      className="block w-full object-cover z-10 h-[156px]"
                       src="https://picsum.photos/200/300"
                     />
                   </Link>

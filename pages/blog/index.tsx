@@ -37,7 +37,7 @@ const Blog = ({ posts }) => {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="mb-10 flex flex-col h-80 p-3 rounded-2xl bg-white shadow-post"
+              className="transform transition duration-200 hover:-translate-y-1 mb-10 flex flex-col h-80 p-3 rounded-2xl bg-white shadow-post"
             >
               <div className="rounded-2xl overflow-hidden flex justify-center cursor-pointer">
                 <Link href={`/blog/${post.slug}`}>
