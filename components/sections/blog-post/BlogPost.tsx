@@ -25,7 +25,7 @@ const BlogPost = ({ post }) => {
               <dt className="text-sm font-medium text-gray-500">Categories</dt>
               <dd className="mt-1 text-sm text-gray-900">
                 {post.tagList.map((tag) => (
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mr-0.5">
                     {tag}
                   </span>
                 ))}
