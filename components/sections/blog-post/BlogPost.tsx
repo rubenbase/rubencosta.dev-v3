@@ -1,12 +1,15 @@
 import React from 'react'
-import Container from 'components/container'
-import Image from 'next/image'
 import dayjs from 'dayjs'
+import Image from 'next/image'
 
-const BlogPost = ({ post }) => {
+import Container from 'components/container'
+import RelatedPosts from 'components/molecules/related-posts/RelatedPosts'
+import { Post } from 'core/types/posts'
+
+const BlogPost = ({ post }: { post: Post }) => {
   return (
     <Container>
-      <article className="relative px-4 sm:px-6 lg:px-8 sm:py-16">
+      <article className="relative px-4 sm:px-6 lg:px-8 sm:pt-16 sm:pb-5">
         <div className="text-lg max-w-prose mx-auto">
           <h1 className="mt-10">
             <span className="mt-2 mb-12 block text-5xl leading-tight font-extralight tracking-tight text-gray-900 sm:text-7xl">
@@ -32,17 +35,16 @@ const BlogPost = ({ post }) => {
               </dd>
             </div>
           </dl>
-
           {post.coverImage ? (
             <Image src={post.coverImage} layout="responsive" width={840} height={353} />
           ) : null}
         </div>
-
         <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
           <div dangerouslySetInnerHTML={{ __html: post.bodyHtml || '' }}></div>
         </div>
       </article>
-      <div className="bg-gray-500 px-16"></div>
+
+      <RelatedPosts {...post.relatedPosts} />
     </Container>
   )
 }
